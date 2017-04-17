@@ -4,19 +4,64 @@
   "description": "Boilerplate for ES6 client-based library. Uses Babel and webpack for transpiling and building, Karma and Jasmine for unit testing, and istanbul-instrumenter-loader for code coverage.",
   "main": "dist/spinner.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "groc": "rimraf docs/groc && groc",
+    "test": "karma start",
+    "test-start": "NODE_ENV=dev karma start",
+    "start": "webpack-dashboard -c magenta -- webpack-dev-server --config ./tools/webpack.config.js --env=dev --progress --profile --colors",
+    "prebuild": "rimraf dist/",
+    "build": "webpack --config ./tools/webpack.config.js --env=prd --progress --profile --colors",
+    "postbuild": "npm run groc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/poohding/es6-karma-jasmine-webpack-boilerplate.git"
   },
   "keywords": [
-    "es6"
+    "es6",
+    "babel",
+    "webpack",
+    "jasmine",
+    "karma",
+    "istanbul",
+    "boilerplate"
   ],
   "author": "poohding (bowaxwing@gmail.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/poohding/es6-karma-jasmine-webpack-boilerplate/issues"
   },
-  "homepage": "https://github.com/poohding/es6-karma-jasmine-webpack-boilerplate#readme"
+  "homepage": "https://github.com/poohding/es6-karma-jasmine-webpack-boilerplate#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-friendly-formatter": "^2.0.7",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "eslint-watch": "^3.1.0",
+    "groc": "^0.8.0",
+    "istanbul-instrumenter-loader": "^2.0.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.6.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage-istanbul-reporter": "^1.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-jquery": "^0.1.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.3",
+    "loader-utils": "^1.1.0",
+    "rimraf": "^2.6.1",
+    "sponge": "^0.1.0",
+    "webpack": "^2.4.1",
+    "webpack-dashboard": "^0.3.0",
+    "webpack-dev-server": "^2.4.2",
+    "webpack-merge": "^4.1.0"
+  }
 }
