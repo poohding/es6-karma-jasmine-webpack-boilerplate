@@ -1,0 +1,22 @@
+{
+  "name": "es6-karma-jasmine-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for ES6 client-based library. Uses Babel and webpack for transpiling and building, Karma and Jasmine for unit testing, and istanbul-instrumenter-loader for code coverage.",
+  "main": "dist/spinner.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poohding/es6-karma-jasmine-webpack-boilerplate.git"
+  },
+  "keywords": [
+    "es6"
+  ],
+  "author": "poohding (bowaxwing@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poohding/es6-karma-jasmine-webpack-boilerplate/issues"
+  },
+  "homepage": "https://github.com/poohding/es6-karma-jasmine-webpack-boilerplate#readme"
+}
