@@ -4,7 +4,9 @@ class SpinnerView {
     }
 
     render() {
-        document.querySelector('.spinner__result').value = this.data;
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.spinner__result').value = this.data;
+        });
     }
 }
 

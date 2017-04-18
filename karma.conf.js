@@ -12,7 +12,7 @@ module.exports = function (config) {
         ],
         files: [
             'test/tests.webpack.js',
-            { pattern: 'test/*.html', included: false },
+            // { pattern: 'test/*.html', included: false },
         ],
         preprocessors: {
             'test/tests.webpack.js': ['webpack', 'sourcemap'],
@@ -25,7 +25,6 @@ module.exports = function (config) {
                     {
                         test: /\.js$/,
                         include: path.resolve('src/'),
-                        exclude: path.resolve('src/polyfill'),
                         enforce: 'pre',
                         loader: 'eslint-loader',
                         options: {
@@ -36,7 +35,6 @@ module.exports = function (config) {
                     {
                         test: /\.js?$/,
                         include: path.resolve('src/'),
-                        exclude: path.resolve('src/polyfill'),
                         loader: 'istanbul-instrumenter-loader',
                         query: {
                             esModules: true

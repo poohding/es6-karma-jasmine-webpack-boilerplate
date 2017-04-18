@@ -17,22 +17,24 @@ class SpinnerController {
     addHandler() {
         const that = this;
 
-        document.querySelector('.spinner__increase').addEventListener('click', (e) => {
-            e.preventDefault();
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.spinner__increase').addEventListener('click', (e) => {
+                e.preventDefault();
 
-            that.onClickIncrease();
-        });
+                that.onClickIncrease();
+            });
 
-        document.querySelector('.spinner__decrease').addEventListener('click', (e) => {
-            e.preventDefault();
+            document.querySelector('.spinner__decrease').addEventListener('click', (e) => {
+                e.preventDefault();
 
-            that.onClickDecrease();
-        });
+                that.onClickDecrease();
+            });
 
-        document.getElementById('frmSpinner').addEventListener('submit', (e) => {
-            e.preventDefault();
+            document.getElementById('frmSpinner').addEventListener('submit', (e) => {
+                e.preventDefault();
 
-            that.onSubmit();
+                that.onSubmit();
+            });
         });
     }
 

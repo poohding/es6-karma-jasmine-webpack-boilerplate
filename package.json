@@ -31,9 +31,12 @@
     "url": "https://github.com/poohding/es6-karma-jasmine-webpack-boilerplate/issues"
   },
   "homepage": "https://github.com/poohding/es6-karma-jasmine-webpack-boilerplate#readme",
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
   "devDependencies": {
     "babel-core": "^6.24.1",
+    "babel-istanbul": "^0.12.2",
     "babel-loader": "^6.4.1",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.24.1",
